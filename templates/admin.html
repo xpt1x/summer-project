@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head %}
+ADMIN PANEL <br><br>
+{% endblock head %}
+
+{% block body %}
+<form style="justify-content: center;" action="{{url_for('panel')}}" method="POST" class="form-inline">
+    
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text">@</div>
+        </div>
+        <input type="text" name="adminName" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+    </div>
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Password</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text">Pass</div>
+        </div>
+        <input type="text" name="adminPass" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+{% endblock body %}

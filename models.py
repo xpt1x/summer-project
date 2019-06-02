@@ -24,3 +24,9 @@ class Passenger(db.Model):
     age = db.Column(db.Integer, nullable=False)
     gender = db.Column(db.String, nullable=False)
     bus_id = db.Column(db.Integer, nullable=False)
+ 
+
+class Panel(db.Model):
+    __tablename__ = "panel"
+    user = db.Column(db.String, primary_key=True, nullable=False)
+    password = db.Column(db.String, nullable=False)
