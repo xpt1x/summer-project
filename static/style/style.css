@@ -1,0 +1,53 @@
+#intro {
+  width: 100%;
+  position: relative;
+  background: url("/static/img/intro-bg.png") center bottom no-repeat;
+  background-size: cover;
+  padding: 15% 0 70px 0;
+}
+#intro .intro-info {
+  width: 50%;
+  float: left;
+}
+
+#intro .intro-info h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro .intro-info h2 span {
+  color: #74b5fc;
+}
+
+#bookbutton {
+  margin-top: 3%;
+  width: 20%;
+
+}
+
+#aboutbutton {
+  margin-top: 1%;
+  width: 20%;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #283d50;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #556877;
+  width: 50%;
+}
+#about {
+  padding: 60px 0;
+}

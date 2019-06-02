@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block head %}
+BUS BOOKING SYSTEM! <br><br>
+<link href="/static/style/style.css" rel="stylesheet">
+{% endblock head %}
+
+{% block body %}
+<section id="intro" class="clearfix">
+    <div class="container">
+        <div class="intro-info">
+            <h2>We provide bus<br><span>Tickets</span><br>at low fare!</h2>
+        </div>
+    </div>
+    <a href="/book" id="bookbutton" role="button" class="btn btn-outline-light">Book Tickets Now</a><br>
+    <a href="#about" id="aboutbutton" role="button" class="btn btn-outline-light">About Us</a>
+</section>
+
+<section id="about">
+<div class="container">
+
+    <header class="section-header">
+    <h3>About Us</h3>
+    <p>We are BUS Ticket providers, we provide bus tickets directly through government bus commision to the user</p>
+    </header>
+
+</div>
+</section><!-- #about -->
+{% endblock body %}

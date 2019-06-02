@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block head %}
+BUS BOOKING SYSTEM! <br><br>
+{% endblock head %}
+
+{% block body %}
+<div class="alert alert-success" role="alert">
+    Ticket successfully Generated!
+</div>
+<center><div class="card" style="width: 18rem;">
+  <!-- <img src="https://cdn.onlinewebfonts.com/svg/img_126777.png" class="card-img-top" alt="..."> -->
+  <div class="card-body">
+    <h3 class="card-title">Bus Ticket</h3><br>
+    <p class="card-text">   
+    <b>{{ user_bus.origin }} to {{ user_bus.destination }}</b><br>
+    Duration: {{ user_bus.duration }}hrs.<br>
+    Price: {{user_bus.price}}<br>
+    Name: {{ name }}<br>
+    Age: {{age}}<br>
+    Gender: {{ gender }} <br>
+
+    </p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Go back</a>
+  </div>
+</div>
+</center>
+{% endblock body %}
