@@ -8,21 +8,26 @@ BUS BOOKING SYSTEM! <br><br>
 <div class="alert alert-success" role="alert">
     Ticket successfully Generated!
 </div>
-<center><div class="card" style="width: 18rem;">
-  <!-- <img src="https://cdn.onlinewebfonts.com/svg/img_126777.png" class="card-img-top" alt="..."> -->
+<div class="container">
+<div class="card border-dark mb-3">
+    <div style="text-align: center" class="card-header">
+        BUS TICKET
+    </div>
   <div class="card-body">
-    <h3 class="card-title">Bus Ticket</h3><br>
-    <p class="card-text">   
-    <b>{{ user_bus.origin }} to {{ user_bus.destination }}</b><br>
-    Duration: {{ user_bus.duration }}hrs.<br>
-    Price: {{user_bus.price}}<br>
-    Name: {{ name }}<br>
-    Age: {{age}}<br>
-    Gender: {{ gender }} <br>
+    <ul class="list-group list-group-flush"> 
+    <li class="list-group-item"><b>Route: </b> <center> {{ user_bus.origin }} to {{ user_bus.destination }}</center></li> 
+    <li class="list-group-item"><b>Duration</b> <center>{{ user_bus.duration }}hrs.</center></li> 
+    <li class="list-group-item"><b>Price</b> <center>{{user_bus.price}}</li> 
+    <li class="list-group-item"><b>Name</b> <center>{{ name }}</center></li> 
+    <li class="list-group-item"><b>Age</b> <center>{{age}}</center></li> 
+    <li class="list-group-item"><b>Gender</b> <center>{{ gender }}</center></li>
 
-    </p>
+    <div style="text-align: center" class="card-footer text-muted">
+        Please show this ticket to conductor when asked
+    </div>
+    <a href="{{ url_for('book') }}" class="btn btn-outline-dark">Book another</a><br>
     <a href="{{ url_for('index') }}" class="btn btn-primary">Go back</a>
   </div>
 </div>
-</center>
+</div>
 {% endblock body %}

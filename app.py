@@ -35,10 +35,14 @@ def success():
 
     if gender == 1:
         gen = 'M'
-    else:
+    elif gender == 2:
         gen = 'F'
+    else:
+        gen = 'O'
 
     pid = db.session.query(db.func.max(Passenger.id)).scalar()
+    if pid is None:
+        pid = 0
     user_bus.add_passenger(name, age, gen, pid+1)
     return render_template('success.html', user_bus=user_bus, name=name, age=age, gender=gen)
 
@@ -50,7 +54,7 @@ def admin():
 
 @app.route('/panel', methods=['POST'])
 def panel():
-    admin = Panel.query.first()
+    admin = Panel.query.first()   # Only 1 admin
     userName = request.form.get('adminName')
     userPass = request.form.get('adminPass')
 
