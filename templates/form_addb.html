@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block head %}
+ADD BUS DATA <br><br>
+{% endblock head %}
+
+{% block body %}
+{% if success %}
+<div class="alert alert-success" role="alert">
+    Bus successfully Added
+</div>
+{%endif%}
+<div class="container">
+    <form action="{{url_for('add_busdata')}}" method="POST">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">id</span>
+            </div>
+            <input name="add_id" type="number" class="form-control" placeholder="id" aria-label="id" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Origin</span>
+            </div>
+            <input name="add_ori" type="text" class="form-control" placeholder="Origin" aria-label="origin" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Destination</span>
+            </div>
+            <input name="add_dest" type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Duration</span>
+            </div>
+            <input name="add_duration" type="number" class="form-control" placeholder="Duration" aria-label="Duration" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Price</span>
+            </div>
+            <input name="add_price" type="number" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-outline-dark btn-lg btn-block">Add Bus to Database</button>
+    </form>
+</div>
+{% endblock body %}

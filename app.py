@@ -59,10 +59,32 @@ def panel():
     userPass = request.form.get('adminPass')
 
     if admin.user == userName and admin.password == userPass:
-        passengers = Passenger.query.all()
-        return render_template('pass.html', passes=passengers)
+        return render_template('panel.html')
     else:
         return render_template('error.html', message='No access!')
+
+
+@app.route('/pass', methods=['POST'])
+def list_passengers():
+    passengers = Passenger.query.all()
+    return render_template('pass.html', passes=passengers)
+
+
+@app.route('/addb', methods=['POST'])
+def addb():
+    return render_template('form_addb.html')
+
+
+@app.route('/add_busdata', methods=['POST'])
+def add_busdata():
+    id = request.form.get('add_id')
+    origin = request.form.get('add_ori')
+    destination = request.form.get('add_dest')
+    duration = request.form.get('add_duration')
+    price = request.form.get('add_price')
+    form_bus = Bus(id, origin, destination, duration, price)
+    form_bus.addbus()
+    return render_template('form_addb.html', success=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block head %}
+ADMIN CONTROL PANEL <br><br>
+{% endblock head %}
+
+{% block body %}
+<div class="container">
+    <form action="{{url_for('list_passengers')}}" method="POST">
+        <button type="submit" class="btn btn-outline-dark btn-lg btn-block">List all Passengers</button>
+    </form><br>
+    <form action="{{url_for('addb')}}" method="POST">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Add Bus Data</button>
+    </form>
+</div>
+{% endblock body %}
