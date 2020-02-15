@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from models import db, Passenger, Panel, Bus
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://bpgkosspwilapk:407d35d8781b7ca4dceed899e56a9ffa99c19bc07c93152c7240378ea1d667d1@ec2-54-221-198-156.compute-1.amazonaws.com:5432/dfn4cgu04vntbb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'DB_URI'
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
